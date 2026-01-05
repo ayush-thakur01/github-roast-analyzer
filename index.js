@@ -1,5 +1,6 @@
 const express = require("express");
 const axios = require("axios");
+const cors = require("cors");
 const { calculateScore } = require("./logic/score");
 const { getRoast } = require("./logic/roast");
 const { generateAdvice } = require("./logic/advice");
@@ -8,6 +9,7 @@ const { generateTimelineAdvice } = require("./logic/timelineAdvice");
 
 
 const app = express();
+app.use(cors());
 const PORT = 5000;
 
 app.get("/analyze/:username", async (req, res) => {
