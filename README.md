@@ -117,7 +117,7 @@ Install dependencies
   npm install
 ```
 
-Start the  backend server/forntend server
+Start the  backend server/frontend server
 
 ```bash
   node index.js
