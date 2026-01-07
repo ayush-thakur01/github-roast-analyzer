@@ -94,3 +94,38 @@ github-roast-analyzer/
 ├── package-lock.json
 ├── .gitignore
 └── LICENSE
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+git clone https://github.com/ayush-thakur01/github-roast-analyzer.git
+
+```
+
+Go to the project directory
+
+```bash
+ cd github-roast-analyzer
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the  backend server
+
+```bash
+  node index.js
+  for frontend:frontend/index.html
+
+
+
+
+
+
+
