@@ -5,78 +5,91 @@ function generateTimelineAdvice(breakdown, tone) {
     "30_days": []
   };
 
-  // 🔴 Very weak / savage
+  // 🔴 Very weak profile (savage)
   if (tone === "savage") {
     timeline["7_days"].push(
-      "GitHub profile bio likh + profile picture set kar",
-      "1 simple beginner project start kar"
+      "Complete your GitHub profile with a clear bio and profile picture",
+      "Start building one simple beginner-level project"
     );
+
     timeline["14_days"].push(
-      "Daily small commits start kar (no zero days)",
-      "Basic README likhna seekh"
+      "Begin making small daily commits to build consistency",
+      "Learn how to write basic README files for your projects"
     );
+
     timeline["30_days"].push(
-      "2 real projects complete kar",
-      "GitHub profile clean aur organized bana"
+      "Complete at least two simple but finished projects",
+      "Organize repositories and remove unused or empty ones"
     );
   }
 
-  // 🟠 Friendly reality
+  // 🟠 Friendly reality check
   if (tone === "friendly_reality") {
     timeline["7_days"].push(
-      "1 incomplete project finish kar",
-      "Old useless repos delete ya archive kar"
+      "Finish one incomplete or partially done project",
+      "Archive or delete low-quality or unused repositories"
     );
+
     timeline["14_days"].push(
-      "Daily commits ki habit bana",
-      "README improve kar"
+      "Maintain daily commits to improve activity consistency",
+      "Improve README files with proper descriptions and setup steps"
     );
+
     timeline["30_days"].push(
-      "2 decent projects add kar",
-      "Tech stack clearly show kar"
+      "Add two well-structured beginner-to-intermediate projects",
+      "Clearly showcase your tech stack across repositories"
     );
   }
 
-  // 🟢 Motivational
+  // 🟢 Motivational (decent profile)
   if (tone === "motivational") {
     timeline["7_days"].push(
-      "1 strong project pe kaam start kar",
-      "README ko professional bana"
+      "Start improving one strong project instead of creating many new ones",
+      "Make project documentation more professional and clear"
     );
+
     timeline["14_days"].push(
-      "Project polish + refactor",
-      "Commits consistent rakho"
+      "Refactor code and improve project structure",
+      "Keep commit activity consistent and meaningful"
     );
+
     timeline["30_days"].push(
-      "Project deploy ya demo ready kar",
-      "Profile ko recruiter-ready bana"
+      "Deploy a project or prepare a working demo",
+      "Make your profile recruiter-ready with polished repositories"
     );
   }
 
-  // 🔵 Praise + push
+  // 🔵 Praise + push (strong profile)
   if (tone === "praise_push") {
     timeline["7_days"].push(
-      "Small improvements ya bug fixes"
+      "Apply small improvements or bug fixes across existing projects"
     );
+
     timeline["14_days"].push(
-      "Open-source contribution start kar"
+      "Start contributing to open-source repositories",
+      "Engage with issues or discussions in the developer community"
     );
+
     timeline["30_days"].push(
-      "Advanced projects ya PRs pe kaam kar"
+      "Work on advanced or collaborative projects",
+      "Submit pull requests and improve public project impact"
     );
   }
 
   // 🟣 Legacy but inactive
   if (tone === "legacy_inactive") {
     timeline["7_days"].push(
-      "1 old strong project revive kar"
+      "Revive one strong older project with minor updates or fixes"
     );
+
     timeline["14_days"].push(
-      "Daily commits restart kar",
-      "Docs polish kar"
+      "Restart consistent commit activity",
+      "Polish documentation to match your past project quality"
     );
+
     timeline["30_days"].push(
-      "Project ko production-ready bana"
+      "Make at least one revived project production-ready",
+      "Show active maintenance and long-term ownership"
     );
   }
 
