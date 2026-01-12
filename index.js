@@ -5,6 +5,8 @@ const { calculateScore } = require("./logic/score");
 const { getRoast } = require("./logic/roast");
 const { generateAdvice } = require("./logic/advice");
 const { generateTimelineAdvice } = require("./logic/timelineAdvice");
+const { getInternshipReadiness } = require("./logic/readiness");
+const { getMainWeakness } = require("./logic/weakness");
 
 
 
@@ -14,6 +16,8 @@ const PORT = 5000;
 
 app.get("/analyze/:username", async (req, res) => {
   const username = req.params.username;
+
+
 
   try {
     const userRes = await axios.get(`https://api.github.com/users/${username}`);
@@ -31,18 +35,24 @@ const timelineAdvice = generateTimelineAdvice(
   result.breakdown,
   roast.tone
 );
+ const readiness = getInternshipReadiness(result.totalScore);
+    const weakness = getMainWeakness(result.breakdown);
+
 
 
 res.json({
   username,
   score: result.totalScore,
   breakdown: result.breakdown,
+  internshipReadiness: readiness,
+  mainWeakness: weakness,
   tone: roast.tone,
   message: roast.message,
   advice: roast.advice,
   timelineAdvice: timelineAdvice
 });
-
+console.log("READINESS 👉", readiness);
+console.log("WEAKNESS 👉", weakness);
 
 
   } catch (err) {
