@@ -2,7 +2,7 @@ async function analyze() {
   const u = document.getElementById("username").value.trim();
   if (!u) return alert("Enter username");
 
-  const res = await fetch(`/analyze/${username}`));
+  const res = await fetch(`/analyze/${username}`);
   const data = await res.json();
 if (data.internshipReadiness) {
   document.getElementById("readinessLevel").innerText =
