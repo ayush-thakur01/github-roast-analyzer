@@ -4,7 +4,7 @@ function getRandom(arr) {
 
 function getRoast(score, recentActive = 0, legacyCount = 0) {
 
-  // 🟣 Legacy but inactive (strong past, weak present)
+  //  Legacy but inactive (strong past, weak present)
   if (score >= 70 && recentActive < 2 && legacyCount >= 2) {
     return {
       tone: "legacy_inactive",
@@ -21,7 +21,7 @@ function getRoast(score, recentActive = 0, legacyCount = 0) {
     };
   }
 
-  // 🔴 0–30 : Very weak / savage honesty
+  //  0–30 : Very weak / savage honesty
   if (score <= 30) {
     return {
       tone: "savage",
@@ -38,7 +38,7 @@ function getRoast(score, recentActive = 0, legacyCount = 0) {
     };
   }
 
-  // 🟠 31–50 : Friendly reality check
+  //  31–50 : Friendly reality check
   if (score <= 50) {
     return {
       tone: "friendly_reality",
@@ -55,7 +55,7 @@ function getRoast(score, recentActive = 0, legacyCount = 0) {
     };
   }
 
-  // 🟢 51–75 : Motivational push
+  //  51–75 : Motivational push
   if (score <= 75) {
     return {
       tone: "motivational",
@@ -72,7 +72,7 @@ function getRoast(score, recentActive = 0, legacyCount = 0) {
     };
   }
 
-  // 🔵 76–100 : Praise + push
+  //  76–100 : Praise + push
   return {
     tone: "praise_push",
     message: getRandom([
