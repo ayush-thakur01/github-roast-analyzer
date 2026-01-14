@@ -38,6 +38,9 @@ This tool acts like a **technical mentor**:
 - 🛠️ **Custom Advice Generation**
 - ⏳ **7 / 14 / 30 Day Improvement Roadmap**
 - 🌙 Simple frontend UI (in progress)
+- 🎯 Internship Readiness Verdict (Not Ready / Almost Ready / Internship Ready)
+- ⚠️ Biggest Improvement Area detection based on profile analysis
+
 
 ---
 
@@ -49,6 +52,19 @@ This tool acts like a **technical mentor**:
 4. Context-aware roast and advice are generated  
 5. Timeline-based roadmap is returned as JSON  
 6. Frontend displays the results
+
+
+## 📸 Interface Preview
+
+### Home Screen
+![Home Screen](screenshots/ui-home.png)
+
+### Profile Analysis Result
+![Analysis Result](screenshots/ui-analysis.png)
+
+### Timeline & Roadmap
+![Timeline](screenshots/ui-timeline.png)
+
 
 ---
 
