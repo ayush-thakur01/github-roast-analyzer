@@ -2,9 +2,8 @@ async function analyze() {
   const u = document.getElementById("username").value.trim();
   if (!u) return alert("Enter username");
 
-  const res = await fetch(`http://localhost:5000/analyze/${u}`);
+  const res = await fetch(`/analyze/${username}`));
   const data = await res.json();
- 
 if (data.internshipReadiness) {
   document.getElementById("readinessLevel").innerText =
     `Status: ${data.internshipReadiness.level}`;
@@ -12,10 +11,6 @@ if (data.internshipReadiness) {
   document.getElementById("readinessMessage").innerText =
     data.internshipReadiness.message;
 }
-
-// ==========================
-// Main Weakness
-// ==========================
 if (data.mainWeakness) {
   document.getElementById("weaknessLabel").innerText =
     `Area: ${data.mainWeakness.label}`;
@@ -24,7 +19,7 @@ if (data.mainWeakness) {
     data.mainWeakness.message;
 }
 
-  console.log("TIMELINE DATA 👉", data.timelineAdvice);
+  console.log("TIMELINE DATA ", data.timelineAdvice);
 
 
   document.getElementById("result").classList.remove("hidden");
